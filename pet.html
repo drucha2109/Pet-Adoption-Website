@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Forever | Premium Pet Adoption</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="navbar">
+        <div class="logo">PAWS<span> & </span>FOREVER...🐾</div>
+        <br>
+        <div class="search-container">
+            <input type="text" id="petSearch" placeholder="Find by name..." onkeyup="searchPets()">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home"> 🏠 Home</a></li>
+            <li><a href="#adopt-section">Adopt</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="images/sample animation.mov" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <br><br><br>
+                <h1 data-aos="zoom-out" data-aos-duration="1500">Find Your <span class="highlight">Soulmate</span></h1>
+                <p data-aos="fade-up" data-aos-delay="400">Experience the joy of local pet adoption with verified health certificates.</p>
+                <a href="#adopt-section" class="btn primary">Start Your Journey</a>
+            <br><br>
+                <div class="container mt-5">
+</div>
+<div class="stats-bar">
+  <div class="container">
+    <div class="row text-center">
+
+      <div class="col-4">
+        <h3 class="stat-val counter" data-target="500">0+</h3>
+        <p class="stat-desc">Pets Adopted</p>
+      </div>
+
+      <div class="col-4">
+        <h3 class="stat-val counter" data-target="10">0</h3>
+        <p class="stat-desc">Available Now</p>
+      </div>
+
+      <div class="col-4">
+        <h3 class="stat-val counter" data-target="100">0%</h3>
+        <p class="stat-desc">Happiness Rate</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </header>
+
+
+    <section class="process-section" data-aos="fade-up">
+        <div class="section-header"><h2>3 Easy Steps to Adopt</h2></div>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-search"></i></div>
+                <h3>Choose</h3>
+                <p>Browse our verified pets and pick your buddy.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-id-card"></i></div>
+                <h3>Apply</h3>
+                <p>Fill out the adoption form with your details.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-heart"></i></div>
+                <h3>Adopt</h3>
+                <p>Meet the pet and bring them home forever!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="adopt-section" class="adoption-container">
+        <div class="section-header">
+            <h2 data-aos="fade-up">Ready for Adoption</h2>
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterPets('all')">All</button>
+                <button class="filter-btn" onclick="filterPets('Dog')">Dogs</button>
+                <button class="filter-btn" onclick="filterPets('Cat')">Cats</button>
+            </div>
+        </div>
+        <div id="pet-grid" class="pet-grid"></div>
+    </section>
+
+    <section class="reviews">
+    <h2 data-aos="fade-up">Happy Pet Parents</h2>
+    
+    <div class="slider-container">
+        <div class="review-slider" id="reviewSlider">
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"The best decision of our lives! Buddy has adjusted so well in our home."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=11" alt="User">
+                    <div><strong>Anjali Sharma</strong><br><small>Adopted a Dog</small></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Very transparent process. The medical records were very detailed and helpful."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=12" alt="User">
+                    <div><strong>Rahul Patil</strong><br><small>Adopted a Cat</small></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Process was very smooth. Rio (the parrot) is healthy and already talking!"</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=13" alt="User">
+                    <div><strong>Sneha K.</strong><br><small>Adopted a Bird</small></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+    </div>
+</section>
+     
+<div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleContact()">&times;</span>
+            <h2>Adoption Form</h2>
+            <p>Please provide your details for the inquiry.</p>
+            <form id="adoptionForm" onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone (10 digits)" pattern="[0-9]{10}" required>
+                <textarea id="message" rows="3" placeholder="Why do you want to adopt?"></textarea>
+                <button type="submit" class="btn primary" style="width: 100%;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>PAWS & FOREVER...🐾</h3>
+                <p>Giving every pet a second chance at life and a happy home.</p>
+            </div>
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#adopt-section">Adopt a Pet</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Paws & Forever. All Rights Reserved. | Made with ❤️ for Animals</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
